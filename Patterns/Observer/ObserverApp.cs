@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+using DesignPatterns;
 using DesignPatterns.Patterns.Observer;
 using DesignPatterns.Patterns.Observer.Displays;
 

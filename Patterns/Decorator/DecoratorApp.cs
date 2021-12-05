@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+using DesignPatterns;
+
 namespace ConsoleApp1.Patterns.Decorator
 {
     public class DecoratorApp : App

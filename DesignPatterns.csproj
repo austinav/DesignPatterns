@@ -5,12 +5,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Patterns\AdapterFacade\" />
-    <Folder Include="Patterns\Command\" />
-    <Folder Include="Patterns\IteratorComposite\" />
-    <Folder Include="Patterns\Proxy\" />
-    <Folder Include="Patterns\State\" />
-  </ItemGroup>
-
 </Project>

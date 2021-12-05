@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 
 using ConsoleApp1.Patterns.Decorator;
-using ConsoleApp1;
+using DesignPatterns;
 
 namespace classes
 {
@@ -16,7 +16,7 @@ namespace classes
         {
             Assembly thisAssembly = Assembly.GetExecutingAssembly();
             List<Type> apps = thisAssembly.GetTypes()
-                        .Where(t => t.Name.EndsWith("App") && !t.IsAbstract)
+                        .Where(t => t.BaseType == thisAssembly.GetType("DesignPatterns.App"))
                         .ToList();
 
             Console.WriteLine("What program do you want to run?");

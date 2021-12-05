@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-using DesignPatterns;
-
-namespace ConsoleApp1.Patterns.Factory
+namespace DesignPatterns.Patterns.Proxy
 {
-    class FactoryApp : App
+    public class ProxyApp : App
     {
         public override void Run() => throw new NotImplementedException();
     }
