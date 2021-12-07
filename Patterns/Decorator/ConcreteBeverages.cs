@@ -11,7 +11,17 @@ namespace ConsoleApp1.Patterns.Decorator
 
         public override decimal cost()
         {
-            return 0.89m;
+            switch(this.BeverageSize)
+            {
+                case Size.TALL:
+                    return .89m;
+                case Size.GRANDE:
+                    return .99m;
+                case Size.VENTI:
+                    return 1.09m;
+                default:
+                    return .89m;
+            }
         }
     }
 
@@ -21,7 +31,17 @@ namespace ConsoleApp1.Patterns.Decorator
 
         public override decimal cost()
         {
-            return 0.99m;
+            switch (this.BeverageSize)
+            {
+                case Size.TALL:
+                    return .99m;
+                case Size.GRANDE:
+                    return 1.09m;
+                case Size.VENTI:
+                    return 1.19m;
+                default:
+                    return .99m;
+            }
         }
     }
 
@@ -31,7 +51,17 @@ namespace ConsoleApp1.Patterns.Decorator
 
         public override decimal cost()
         {
-            return 1.99m;
+            switch (this.BeverageSize)
+            {
+                case Size.TALL:
+                    return 1.99m;
+                case Size.GRANDE:
+                    return 2.19m;
+                case Size.VENTI:
+                    return 2.39m;
+                default:
+                    return 1.99m;
+            }
         }
     }
     public class Decaf : Beverage
@@ -40,7 +70,17 @@ namespace ConsoleApp1.Patterns.Decorator
 
         public override decimal cost()
         {
-            return 1.05m;
+            switch (this.BeverageSize)
+            {
+                case Size.TALL:
+                    return 1.05m;
+                case Size.GRANDE:
+                    return 1.19m;
+                case Size.VENTI:
+                    return 1.39m;
+                default:
+                    return 1.05m;
+            }
         }
     }
 }

@@ -11,18 +11,29 @@ namespace ConsoleApp1.Patterns.Decorator
         public override void Run()
         {
             Beverage order = new Decaf();
-            Console.WriteLine(order.description + " costs " + order.cost());
+            OutputOrder(order);
 
             order = new Whip(order);
-            Console.WriteLine(order.description + " costs " + order.cost());
+            OutputOrder(order);
 
             order = new Mocha(order);
-            Console.WriteLine(order.description + " costs " + order.cost());
+            OutputOrder(order);
 
             order = new Whip(order);
-            Console.WriteLine(order.description + " costs " + order.cost());
+            OutputOrder(order);
 
             order = new SteamedMilk(order);
+            OutputOrder(order);
+
+            order.BeverageSize = Beverage.Size.GRANDE;
+            OutputOrder(order);
+
+            order.BeverageSize = Beverage.Size.VENTI;
+            OutputOrder(order);
+        }
+
+        public void OutputOrder(Beverage order)
+        {
             Console.WriteLine(order.description + " costs " + order.cost());
         }
     }

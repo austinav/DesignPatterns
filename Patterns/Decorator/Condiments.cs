@@ -27,7 +27,24 @@ namespace ConsoleApp1.Patterns.Decorator
 
         public override decimal cost()
         {
-            return this.beverage.cost() + .20m;
+            decimal myCost = 0;
+            switch (this.beverage.BeverageSize)
+            {
+                case Size.TALL:
+                    myCost = .20m;
+                    break;
+                case Size.GRANDE:
+                    myCost = .30m;
+                    break;
+                case Size.VENTI:
+                    myCost = .40m;
+                    break;
+                default:
+                    myCost = .20m;
+                    break;
+            }
+
+            return this.beverage.cost() + myCost;
         }
     }
     public class Soy : CondimentDecorator

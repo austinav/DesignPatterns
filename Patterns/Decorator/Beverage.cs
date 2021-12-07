@@ -10,7 +10,13 @@ namespace ConsoleApp1.Patterns.Decorator
     {
         public enum Size { TALL, GRANDE, VENTI };
 
-        public Size size { get; set; } = Size.TALL;
+        private Size beverageSize;
+        public virtual Size BeverageSize { get => beverageSize; set => beverageSize = value; }
+
+        public Beverage()
+        {
+            this.beverageSize = Size.TALL;
+        }
 
         public abstract string description { get; }
         public abstract decimal cost();

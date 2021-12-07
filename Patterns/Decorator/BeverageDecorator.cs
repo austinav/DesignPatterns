@@ -7,6 +7,10 @@ namespace ConsoleApp1.Patterns.Decorator
 {
     public abstract class CondimentDecorator : Beverage
     {
+        public Beverage beverage;
+
+        public override Size BeverageSize { get => beverage.BeverageSize; set => beverage.BeverageSize = value; }
+
         public override string description
         {
             get
@@ -17,23 +21,11 @@ namespace ConsoleApp1.Patterns.Decorator
                 }
                 else
                 {
-                    return $"{this.beverage.description} and {this.GetType().Name}";
-                    //var allDesc = new List<string> { this.GetType().Name };
-                    //allDesc.AddRange(this.beverage.description.Split(",").ToList());
-                    //return string.Join(", ", allDesc.OrderBy(s => s));
-                    //.GroupBy(item => item)
-                    //.Select(group => group.Count() + " " + group.Key.ToString()).ToString()
-                    // and {this.GetType().Name}";
-                    //.Select(group => new
-                    // {
-                    //     group.Key,
-                    //     Count = group.Count()
-                    // });
+                    return $"{this.beverage.description} and {this.GetType().Name}";                    
                 }
             }
         }
 
-        public Beverage beverage;
  
     }
 }
