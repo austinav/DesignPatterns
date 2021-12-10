@@ -8,6 +8,6 @@ namespace DesignPatterns.Patterns.IteratorComposite
 {
     class IteratorCompositeApp : App
     {
-        public override void Run() => throw new NotImplementedException();
+        public override void MainProgram() => throw new NotImplementedException();
     }
 }

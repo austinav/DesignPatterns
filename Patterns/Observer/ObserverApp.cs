@@ -10,7 +10,7 @@ namespace ConsoleApp1.Patterns.Observer
 {
     class ObserverApp : App
     {
-        public override void Run()
+        public override void MainProgram()
         {
             Console.WriteLine("Begin Weather Station");
             Console.WriteLine();

@@ -9,7 +9,7 @@ namespace ConsoleApp1.Patterns.Factory
 {
     class FactoryApp : App
     {
-        public override void Run() 
+        public override void MainProgram() 
         {
             PizzaStore nyPizzaStore = new NYPizzaStore();
             var pizza = nyPizzaStore.orderPizza("cheese");

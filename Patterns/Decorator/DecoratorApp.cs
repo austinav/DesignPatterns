@@ -8,7 +8,7 @@ namespace ConsoleApp1.Patterns.Decorator
 {
     public class DecoratorApp : App
     {
-        public override void Run()
+        public override void MainProgram()
         {
             Beverage order = new Decaf();
             OutputOrder(order);

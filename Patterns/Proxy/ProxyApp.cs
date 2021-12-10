@@ -8,6 +8,6 @@ namespace DesignPatterns.Patterns.Proxy
 {
     public class ProxyApp : App
     {
-        public override void Run() => throw new NotImplementedException();
+        public override void MainProgram() => throw new NotImplementedException();
     }
 }

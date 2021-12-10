@@ -18,28 +18,40 @@ namespace classes
             List<Type> apps = thisAssembly.GetTypes()
                         .Where(t => t.BaseType == thisAssembly.GetType("DesignPatterns.App"))
                         .ToList();
+            string appToRun = ChooseApp(string.Join(", ", apps.Select(t => t.Name)));
+            while (appToRun != "quit")
+            {
+                Console.Clear();
+                Console.WriteLine("Program: " + appToRun);
+                Console.WriteLine("__________________________________________________");
+                Console.WriteLine();
 
+                try
+                {
+                    Type appType = apps.Where(t => t.Name == appToRun).FirstOrDefault();
+                    App app = (App)Activator.CreateInstance(appType);
+
+                    app.Run();
+                }
+                catch
+                {
+                    Console.WriteLine("Your selection is invalid");
+                    Console.WriteLine();
+                }
+
+                appToRun = ChooseApp(string.Join(", ", apps.Select(t => t.Name)));
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Goodbye");
+        }
+
+        private static string ChooseApp(string selections)
+        {
             Console.WriteLine("What program do you want to run?");
-            Console.WriteLine(string.Join(", ", apps.Select(t => t.Name)));
+            Console.WriteLine(selections);
             Console.WriteLine();
-            string appToRun = Console.ReadLine();
-
-            Console.Clear();
-            Console.WriteLine("Program: " + appToRun);
-            Console.WriteLine("__________________________________________________");
-            Console.WriteLine();
-
-            try
-            {
-                Type appType = apps.Where(t => t.Name == appToRun).FirstOrDefault();
-                App app = (App)Activator.CreateInstance(appType);
-
-                app.Run();
-            }
-            catch
-            {
-                Console.WriteLine("Your selection is invalid");
-            }
+            return Console.ReadLine();
         }
     }
 }

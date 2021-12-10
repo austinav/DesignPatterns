@@ -8,6 +8,6 @@ namespace DesignPatterns.Patterns.Command
 {
     public class CommandApp : App
     {
-        public override void Run() => throw new NotImplementedException();
+        public override void MainProgram() => throw new NotImplementedException();
     }
 }

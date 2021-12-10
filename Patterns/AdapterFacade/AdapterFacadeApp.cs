@@ -8,6 +8,6 @@ namespace DesignPatterns.Patterns.AdapterFacade
 {
     public class AdapterFacadeApp : App
     {
-        public override void Run() => throw new NotImplementedException();
+        public override void MainProgram() => throw new NotImplementedException();
     }
 }
