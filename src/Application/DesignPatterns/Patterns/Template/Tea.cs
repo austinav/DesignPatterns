@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Patterns.Template
 {
-    public class TeaWithHook : CaffeineBeverageWithHook
-    {
+	public class TeaWithHook : CaffeineBeverageWithHook
+	{
 		protected override void brew()
 		{
 			Console.WriteLine("Steeping the tea");
@@ -46,7 +46,7 @@ namespace DesignPatterns.Patterns.Template
 			{
 				answer = instream.ReadLine();
 			}
-			catch (IOException ioe)
+			catch (IOException)
 			{
 				Console.WriteLine("IO error trying to read your answer");
 			}
