@@ -7,22 +7,23 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Patterns.Template
 {
-    public class TeaWithHook : CaffeineBeverageWithHook
-    {
+	public class CoffeeWithHook : CaffeineBeverageWithHook
+	{
+
+
 		protected override void brew()
 		{
-			Console.WriteLine("Steeping the tea");
+			Console.WriteLine("Dripping Coffee through filter");
 		}
 
 		protected override void addCondiments()
 		{
-			Console.WriteLine("Adding Lemon");
+			Console.WriteLine("Adding Sugar and Milk");
 		}
 
 		protected override bool customerWantsCondiments()
 		{
-
-			String answer = getUserInput();
+			string answer = getUserInput();
 
 			if (answer.ToLower().StartsWith("y"))
 			{
@@ -36,17 +37,17 @@ namespace DesignPatterns.Patterns.Template
 
 		private String getUserInput()
 		{
-			// get the user's response
 			String answer = null;
 
-			Console.Write("Would you like lemon with your tea (y/n)? ");
+			Console.Write("Would you like milk and sugar with your coffee (y/n)? ");
 
 			TextReader instream = Console.In;
+			//BufferedReader in = knew BufferedReader(new InputStreamReader(System.in));
 			try
 			{
 				answer = instream.ReadLine();
 			}
-			catch (IOException ioe)
+			catch (IOException)
 			{
 				Console.WriteLine("IO error trying to read your answer");
 			}

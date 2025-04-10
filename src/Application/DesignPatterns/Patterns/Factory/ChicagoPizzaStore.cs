@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using DesignPatterns.Patterns.Factory.Ingredients;
+﻿using DesignPatterns.Patterns.Factory.Ingredients;
 using DesignPatterns.Patterns.Factory.Pizzas;
 
 namespace DesignPatterns.Patterns.Factory
