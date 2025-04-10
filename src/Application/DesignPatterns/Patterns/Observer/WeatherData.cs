@@ -13,10 +13,7 @@ namespace DesignPatterns.Patterns.Observer
         public decimal Humidity { get; private set; }
         public decimal Pressure { get; private set; }
 
-        public WeatherData()
-        {
-            this.observers = new List<IObserver>();
-        }
+        public WeatherData() => this.observers = new List<IObserver>();
 
         public void notifyObservers() => observers.ForEach(o => o.update(this));
         public void registerObserver(IObserver observer) => observers.Add(observer);

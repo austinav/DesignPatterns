@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 using DesignPatterns;
 
 namespace ConsoleApp1.Patterns.Decorator
@@ -32,9 +29,6 @@ namespace ConsoleApp1.Patterns.Decorator
             OutputOrder(order);
         }
 
-        public void OutputOrder(Beverage order)
-        {
-            Console.WriteLine(order.description + " costs " + order.cost());
-        }
+        public void OutputOrder(Beverage order) => Console.WriteLine(order.Description + " costs " + order.cost());
     }
 }
